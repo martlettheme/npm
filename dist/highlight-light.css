@@ -1,0 +1,20 @@
+/* Martlet Light 1.0.0. MIT. */
+pre code.hljs { display: block; overflow-x: auto; padding: 1em; }
+code.hljs { padding: 3px 5px; }
+.hljs { background: #FFFFFF; color: #122744; }
+.hljs-subst { color: #122744; }
+.hljs-keyword, .hljs-selector-tag, .hljs-literal { color: #154C9E; }
+.hljs-string, .hljs-regexp, .hljs-addition { color: #286B40; }
+.hljs-number { color: #A02E42; }
+.hljs-title, .hljs-function, .hljs-title.function_ { color: #103A79; }
+.hljs-type, .hljs-built_in, .hljs-title.class_ { color: #805000; }
+.hljs-variable, .hljs-params { color: #122744; }
+.hljs-comment, .hljs-quote { color: #455B76; }
+.hljs-symbol, .hljs-bullet { color: #68409B; }
+.hljs-tag, .hljs-name { color: #154C9E; }
+.hljs-attr, .hljs-attribute { color: #805000; }
+.hljs-deletion { color: #A02E42; }
+.hljs-meta { color: #68409B; }
+.hljs-operator, .hljs-punctuation { color: #455B76; }
+.hljs-comment, .hljs-quote, .hljs-emphasis { font-style: italic; }
+.hljs-strong { font-weight: bold; }

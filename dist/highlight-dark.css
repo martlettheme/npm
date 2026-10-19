@@ -1,0 +1,20 @@
+/* Martlet Dark 1.0.0. MIT. */
+pre code.hljs { display: block; overflow-x: auto; padding: 1em; }
+code.hljs { padding: 3px 5px; }
+.hljs { background: #040B16; color: #F3F7FF; }
+.hljs-subst { color: #F3F7FF; }
+.hljs-keyword, .hljs-selector-tag, .hljs-literal { color: #FEE46E; }
+.hljs-string, .hljs-regexp, .hljs-addition { color: #9DC3AE; }
+.hljs-number { color: #FFA7AB; }
+.hljs-title, .hljs-function, .hljs-title.function_ { color: #93BDF4; }
+.hljs-type, .hljs-built_in, .hljs-title.class_ { color: #FFD78A; }
+.hljs-variable, .hljs-params { color: #F3F7FF; }
+.hljs-comment, .hljs-quote { color: #C6D5EB; }
+.hljs-symbol, .hljs-bullet { color: #D9B1FF; }
+.hljs-tag, .hljs-name { color: #FEE46E; }
+.hljs-attr, .hljs-attribute { color: #FFD78A; }
+.hljs-deletion { color: #FFA7AB; }
+.hljs-meta { color: #D9B1FF; }
+.hljs-operator, .hljs-punctuation { color: #C6D5EB; }
+.hljs-comment, .hljs-quote, .hljs-emphasis { font-style: italic; }
+.hljs-strong { font-weight: bold; }
