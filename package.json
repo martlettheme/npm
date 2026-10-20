@@ -1,22 +1,23 @@
 {
-  "name": "@martlettheme/theme",
-  "version": "1.0.0",
+  "name": "@martlet/theme",
+  "version": "2.0.0",
   "private": false,
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "build": "node scripts/build.mjs",
-    "test": "node --test scripts/verify.test.mjs",
+    "build": "node scripts/build.mjs && node scripts/build-foundation.mjs",
+    "test": "node --test scripts/*.test.mjs",
     "prepack": "npm run build && npm test"
   },
-  "description": "Martlet Light and Dark CSS, JSON tokens, and highlight.js styles",
+  "description": "Framework-independent Martlet colors, typography, fonts, design tokens, and optional interface styles",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "NOTICE.md"
   ],
   "sideEffects": [
     "**/*.css"
@@ -34,7 +35,17 @@
     "./light.json": "./dist/light.json",
     "./dark.json": "./dist/dark.json",
     "./highlight-light.css": "./dist/highlight-light.css",
-    "./highlight-dark.css": "./dist/highlight-dark.css"
+    "./highlight-dark.css": "./dist/highlight-dark.css",
+    "./foundation.css": "./dist/foundation.css",
+    "./typography.css": "./dist/typography.css",
+    "./fonts.css": "./dist/fonts.css",
+    "./components.css": "./dist/components.css",
+    "./full.css": "./dist/full.css",
+    "./foundation.json": "./dist/foundation.json",
+    "./design.json": "./dist/design.json",
+    "./capabilities.json": "./dist/capabilities.json",
+    "./package.json": "./package.json",
+    "./legacy.css": "./dist/legacy.css"
   },
   "publishConfig": {
     "access": "public"
@@ -50,5 +61,11 @@
     "colors",
     "design-tokens",
     "highlight.js"
-  ]
+  ],
+  "dependencies": {
+    "@fontsource/cambo": "5.3.0",
+    "@fontsource/cinzel": "5.3.0",
+    "@fontsource/ibm-plex-mono": "5.3.0",
+    "@fontsource/lato": "5.3.0"
+  }
 }

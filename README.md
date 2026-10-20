@@ -1,39 +1,44 @@
-# Martlet for web projects
+# Martlet core
 
-Package name: `@martlettheme/theme`. **Prepared for publishing; not yet published to the npm registry.** The npm organization/scope is separate from GitHub and must be configured before publication.
+`@martlet/theme` is the framework-independent source of truth for Martlet. It contains Light/Dark semantic colors and the typography, spacing, shape, depth, and interaction definitions extracted from jameshoward.us.
 
-## Install the local archive
+## Choose what to adopt
 
-Run `npm run build && npm test && npm pack` in this repository, then in your application:
-
-```sh
-npm install /path/to/martlettheme-theme-1.0.0.tgz
-```
-
-## Use
+| Import | Effect |
+| --- | --- |
+| `@martlet/theme/css` | Original scoped Light/Dark color variables only; unchanged from v1 |
+| `@martlet/theme/foundation.css` | Namespaced design variables; no font loading or element styles |
+| `@martlet/theme/typography.css` | Text roles inside `.martlet`; requires foundation variables |
+| `@martlet/theme/fonts.css` | Optional, locally bundled Cambo, Lato, Cinzel, and IBM Plex Mono assets through Fontsource |
+| `@martlet/theme/components.css` | Optional namespaced interface primitives; requires colors and foundation |
+| `@martlet/theme/full.css` | Colors, foundation, typography, and components; fonts remain optional |
+| `@martlet/theme/legacy.css` | Optional variable aliases for incremental website migration |
 
 ```js
-import '@martlettheme/theme/css';
-import { light, dark } from '@martlettheme/theme';
-console.log(dark.tokens.accent);
+import '@martlet/theme/full.css';
+import '@martlet/theme/fonts.css';
+import { light, dark, foundation, design, capabilities } from '@martlet/theme';
 ```
 
-Set `data-martlet="light"` or `data-martlet="dark"` on the element to theme. Both can be used on different elements on one page.
+Set `data-martlet="light"` or `data-martlet="dark"` on the element to theme; add `class="martlet"` to opt into typography and interface styling. Modes may coexist on the same page. CSS remains available without JavaScript; font package imports require a CSS-capable bundler. ESM and CommonJS exports, TypeScript declarations, per-mode JSON, `tokens.json`, `foundation.json`, `design.json`, `capabilities.json`, and highlight.js styles are explicit package exports.
 
-```css
-.panel { background: var(--martlet-panel); color: var(--martlet-text); }
-```
+## Typography and overrides
 
-CommonJS uses `const { dark } = require('@martlettheme/theme');`. CSS, per-mode JSON, complete JSON tokens, and highlight.js styles have explicit package exports; TypeScript declarations are included. For highlight.js, import `@martlettheme/theme/highlight-dark.css` (or light) instead of its default stylesheet. There are no runtime dependencies.
+- Serif: Cambo, for prose and primary headings.
+- Sans: Lato, for interface text, navigation, and metadata.
+- Display: Cinzel, for display accents and secondary heading roles.
+- Monospace: IBM Plex Mono, for code and terminal text.
 
-## Publishing later
+These roles come from the originating personal site, not the demonstration site's former Space Grotesk/DM Sans pairing. Berkeley Mono is not distributed. An owner who has licensed it can override `--martlet-font-mono` on their own root or theme scope. Generic consumers need no proprietary fonts. See NOTICE.md for font licenses.
 
-After configuring the npm scope and signing in, review `npm pack --dry-run` and publish deliberately with `npm publish --access public`. CI only builds and tests; it never publishes.
+The optional full stylesheet is not a site template: it includes no personal identity, content, analytics, or consent policy. See [`@martlet/astro`](https://github.com/martlettheme/astro) for Astro composition and a neutral starter.
 
-These are generated distributions of [Martlet Theme](https://martlettheme.dev/), version 1.0.0. Canonical colors and generators live in [martlettheme/martlettheme](https://github.com/martlettheme/martlettheme). The source repository may require maintainer access. This repository includes a complete color snapshot in source.json and can build without access to that repository.
+## Source and releases
 
-MIT license. Copyright 2026 James P. Howard, II.
+Edit `source.json` here; run `npm ci --ignore-scripts`, `npm run build`, `npm test`, and `npm pack`. Generated `dist/` is committed for review and reproducibility. Fontsource dependencies are pinned; lockfiles retain their integrity. The source website's original colors are retained as separate identity tokens rather than silently replacing existing semantic app colors. Reduced-motion preferences zero the shared motion tokens.
 
-## Maintenance
+The `capabilities` export records what each integration applies, requires separate configuration for, or cannot support. A browser color theme does not change fonts. Editors and terminals use the monospace role only where their host allows it.
 
-Edit the canonical palette and generator upstream, then run npm run build there. The complete distribution directories are emitted under artifacts/repositories/. Sync the relevant directory into this repository. To reproduce a snapshot here, run npm run build, then npm test. Node.js 22 or newer is used in CI. No registry publication runs automatically.
+Registry publication is pending. Before publication install the versioned archive with `npm install ./martlet-theme-2.0.0.tgz`. The npm scope is `martlet`, independently of the `martlettheme` GitHub organization. The old `@martlettheme/theme` name existed in prepared archives but was not published; existing color APIs are preserved in this renamed package. Version 2 makes the broader design contract and originating-site typography explicit.
+
+Application port generators in `martlettheme/martlettheme` consume this package. They must not regenerate it. CI never publishes automatically.

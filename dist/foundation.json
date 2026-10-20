@@ -1,0 +1,119 @@
+{
+  "origin": "https://jameshoward.us/",
+  "sourceRepository": "k3jph/k3jph.github.io",
+  "sourceCommit": "471abfe",
+  "tokens": {
+    "color-charcoal": "#303030",
+    "color-navy-950": "#07111f",
+    "color-navy-900": "#0b1c33",
+    "color-navy-800": "#132b49",
+    "color-navy-700": "#1b3d64",
+    "color-blue-600": "#255f91",
+    "color-gold-700": "#80550f",
+    "color-gold-600": "#9a6b15",
+    "color-gold-500": "#c7952f",
+    "color-gold-300": "#e6c77d",
+    "color-cream": "#f8f4e9",
+    "color-slate-900": "#202a35",
+    "color-slate-700": "#566270",
+    "color-slate-500": "#7b8793",
+    "color-slate-400": "#9aa5b1",
+    "color-slate-300": "#c9d0d7",
+    "color-slate-150": "#e4e8ec",
+    "color-slate-075": "#f5f7f8",
+    "color-white": "#fff",
+    "color-ink": "#222a33",
+    "color-danger": "#a3392e",
+    "hero-overlay": "linear-gradient(115deg, rgb(7 17 31 / 90%), rgb(12 35 60 / 80%))",
+    "font-display": "'Cinzel', Georgia, serif",
+    "font-serif": "'Cambo', Georgia, serif",
+    "font-sans": "'Lato', 'Helvetica Neue', Arial, sans-serif",
+    "space-1": ".25rem",
+    "space-2": ".5rem",
+    "space-3": "1rem",
+    "space-4": "1.5rem",
+    "space-5": "2.5rem",
+    "space-6": "4rem",
+    "space-7": "6rem",
+    "space-8": "8rem",
+    "reading-width": "48rem",
+    "content-width": "78rem",
+    "archive-width": "88rem",
+    "radius-sm": ".25rem",
+    "radius-md": ".55rem",
+    "radius-lg": ".8rem",
+    "shadow-sm": "0 2px 12px rgb(7 17 31 / 10%)",
+    "shadow-md": "0 10px 30px rgb(7 17 31 / 14%)",
+    "shadow-lg": "0 18px 50px rgb(7 17 31 / 22%)",
+    "transition-ui": ".2s ease",
+    "font-mono": "'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+    "text-body": "1.075rem",
+    "text-h1": "clamp(2.25rem, 5vw, 4.65rem)",
+    "text-h2": "clamp(1.75rem, 3vw, 2.6rem)",
+    "text-h3": "clamp(1.25rem, 2vw, 1.65rem)",
+    "leading-body": "1.72",
+    "leading-heading": "1.18",
+    "tracking-label": ".1em",
+    "radius-control": "0",
+    "radius-card": "0",
+    "shadow-card": "none",
+    "border-width": "1px",
+    "focus-width": "3px",
+    "focus-gap": "3px",
+    "gutter": "clamp(1rem, 3vw, 2rem)",
+    "section-space": "clamp(3rem, 6vw, 6rem)",
+    "control-height": "2.8rem",
+    "control-padding": ".65rem .8rem",
+    "button-padding": ".65rem 1.1rem",
+    "divider-width": "3rem",
+    "divider-thickness": "2px",
+    "link-underline-offset": ".16em",
+    "motion-duration": ".2s"
+  },
+  "typographyRoles": {
+    "serif": {
+      "family": "Cambo",
+      "usage": "Body prose and h1–h3",
+      "weights": [
+        400
+      ]
+    },
+    "sans": {
+      "family": "Lato",
+      "usage": "Navigation, controls, tables, metadata",
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ]
+    },
+    "display": {
+      "family": "Cinzel",
+      "usage": "Display accents and h4–h6",
+      "weights": [
+        400,
+        600,
+        700,
+        800
+      ]
+    },
+    "mono": {
+      "family": "IBM Plex Mono",
+      "usage": "Code, terminal text, keyboard notation",
+      "weights": [
+        400,
+        500,
+        600,
+        700
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "personalOverride": "Berkeley Mono (not bundled)"
+    }
+  }
+}
