@@ -1,0 +1,72 @@
+/* Origin: jameshoward.us. Variables only; no element styles or font downloads. */
+:root, [data-martlet] {
+  --martlet-color-charcoal: #303030;
+  --martlet-color-navy-950: #07111f;
+  --martlet-color-navy-900: #0b1c33;
+  --martlet-color-navy-800: #132b49;
+  --martlet-color-navy-700: #1b3d64;
+  --martlet-color-blue-600: #255f91;
+  --martlet-color-gold-700: #80550f;
+  --martlet-color-gold-600: #9a6b15;
+  --martlet-color-gold-500: #c7952f;
+  --martlet-color-gold-300: #e6c77d;
+  --martlet-color-cream: #f8f4e9;
+  --martlet-color-slate-900: #202a35;
+  --martlet-color-slate-700: #566270;
+  --martlet-color-slate-500: #7b8793;
+  --martlet-color-slate-400: #9aa5b1;
+  --martlet-color-slate-300: #c9d0d7;
+  --martlet-color-slate-150: #e4e8ec;
+  --martlet-color-slate-075: #f5f7f8;
+  --martlet-color-white: #fff;
+  --martlet-color-ink: #222a33;
+  --martlet-color-danger: #a3392e;
+  --martlet-hero-overlay: linear-gradient(115deg, rgb(7 17 31 / 90%), rgb(12 35 60 / 80%));
+  --martlet-font-display: 'Cinzel', Georgia, serif;
+  --martlet-font-serif: 'Cambo', Georgia, serif;
+  --martlet-font-sans: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+  --martlet-space-1: .25rem;
+  --martlet-space-2: .5rem;
+  --martlet-space-3: 1rem;
+  --martlet-space-4: 1.5rem;
+  --martlet-space-5: 2.5rem;
+  --martlet-space-6: 4rem;
+  --martlet-space-7: 6rem;
+  --martlet-space-8: 8rem;
+  --martlet-reading-width: 48rem;
+  --martlet-content-width: 78rem;
+  --martlet-archive-width: 88rem;
+  --martlet-radius-sm: .25rem;
+  --martlet-radius-md: .55rem;
+  --martlet-radius-lg: .8rem;
+  --martlet-shadow-sm: 0 2px 12px rgb(7 17 31 / 10%);
+  --martlet-shadow-md: 0 10px 30px rgb(7 17 31 / 14%);
+  --martlet-shadow-lg: 0 18px 50px rgb(7 17 31 / 22%);
+  --martlet-transition-ui: .2s ease;
+  --martlet-font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --martlet-text-body: 1.075rem;
+  --martlet-text-h1: clamp(2.25rem, 5vw, 4.65rem);
+  --martlet-text-h2: clamp(1.75rem, 3vw, 2.6rem);
+  --martlet-text-h3: clamp(1.25rem, 2vw, 1.65rem);
+  --martlet-leading-body: 1.72;
+  --martlet-leading-heading: 1.18;
+  --martlet-tracking-label: .1em;
+  --martlet-radius-control: 0;
+  --martlet-radius-card: 0;
+  --martlet-shadow-card: none;
+  --martlet-border-width: 1px;
+  --martlet-focus-width: 3px;
+  --martlet-focus-gap: 3px;
+  --martlet-gutter: clamp(1rem, 3vw, 2rem);
+  --martlet-section-space: clamp(3rem, 6vw, 6rem);
+  --martlet-control-height: 2.8rem;
+  --martlet-control-padding: .65rem .8rem;
+  --martlet-button-padding: .65rem 1.1rem;
+  --martlet-divider-width: 3rem;
+  --martlet-divider-thickness: 2px;
+  --martlet-link-underline-offset: .16em;
+  --martlet-motion-duration: .2s;
+}
+@media (prefers-reduced-motion: reduce) {
+  :root, [data-martlet] { --martlet-transition-ui: 0s; --martlet-motion-duration: 0s; }
+}

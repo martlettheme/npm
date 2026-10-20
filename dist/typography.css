@@ -1,0 +1,9 @@
+/* Optional typography, independent of font loading. */
+:where(.martlet) { font-family: var(--martlet-font-serif); font-size: var(--martlet-text-body); line-height: var(--martlet-leading-body); }
+:where(.martlet) :where(h1,h2,h3) { font-family: var(--martlet-font-serif); font-weight: 400; line-height: var(--martlet-leading-heading); text-wrap: balance; }
+:where(.martlet) :where(h4,h5,h6) { font-family: var(--martlet-font-display); font-weight: 600; line-height: var(--martlet-leading-heading); }
+:where(.martlet) h1 { font-size: var(--martlet-text-h1); }
+:where(.martlet) h2 { font-size: var(--martlet-text-h2); }
+:where(.martlet) h3 { font-size: var(--martlet-text-h3); }
+:where(.martlet) :where(nav,button,input,select,textarea,table,.martlet-ui) { font-family: var(--martlet-font-sans); }
+:where(.martlet) :where(code,pre,kbd,samp), :where(.martlet-code) { font-family: var(--martlet-font-mono); }
