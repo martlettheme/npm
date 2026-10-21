@@ -22,7 +22,7 @@ const fontImports = [
   ...[400,500,600,700].flatMap(w => [`@fontsource/ibm-plex-mono/${w}.css`, `@fontsource/ibm-plex-mono/${w}-italic.css`]),
 ];
 await writeFile('dist/fonts.css', fontImports.map(path => `@import '${path}';`).join('\n')+'\n');
-await writeFile('dist/full.css', "@import './theme.css';\n@import './foundation.css';\n@import './typography.css';\n@import './components.css';\n");
+await writeFile('dist/full.css', "@import './theme.css';\n@import './foundation.css';\n@import './typography.css';\n@import './components.css';\n@import './layout.css';\n");
 await writeFile('dist/foundation.json', JSON.stringify(foundation,null,2)+'\n');
 await writeFile('dist/capabilities.json', JSON.stringify(source.capabilities,null,2)+'\n');
 await writeFile('dist/design.json', JSON.stringify(design,null,2)+'\n');
@@ -31,3 +31,6 @@ await writeFile('dist/components.css', await readFile(new URL('../styles/compone
 
 const aliases = Object.keys(foundation.tokens).map(key => `  --${key}: var(--martlet-${key});`).join('\n');
 await writeFile('dist/legacy.css', `/* Optional aliases for an existing website migrating to Martlet. */\n:root {\n${aliases}\n}\n`);
+
+await writeFile('dist/layout.css', await readFile(new URL('../styles/layout.css',import.meta.url),'utf8'));
+await writeFile('dist/layout.json', JSON.stringify(source.layout,null,2)+'\n');

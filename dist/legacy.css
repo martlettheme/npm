@@ -66,4 +66,12 @@
   --divider-thickness: var(--martlet-divider-thickness);
   --link-underline-offset: var(--martlet-link-underline-offset);
   --motion-duration: var(--martlet-motion-duration);
+  --layout-gap: var(--martlet-layout-gap);
+  --layout-gap-small: var(--martlet-layout-gap-small);
+  --layout-gap-large: var(--martlet-layout-gap-large);
+  --layout-sidebar-width: var(--martlet-layout-sidebar-width);
+  --layout-main-min: var(--martlet-layout-main-min);
+  --layout-grid-min: var(--martlet-layout-grid-min);
+  --layout-split-min: var(--martlet-layout-split-min);
+  --layout-section-space: var(--martlet-layout-section-space);
 }

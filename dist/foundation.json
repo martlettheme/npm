@@ -68,7 +68,15 @@
     "divider-width": "3rem",
     "divider-thickness": "2px",
     "link-underline-offset": ".16em",
-    "motion-duration": ".2s"
+    "motion-duration": ".2s",
+    "layout-gap": "1.5rem",
+    "layout-gap-small": ".75rem",
+    "layout-gap-large": "2.5rem",
+    "layout-sidebar-width": "16rem",
+    "layout-main-min": "30rem",
+    "layout-grid-min": "18rem",
+    "layout-split-min": "20rem",
+    "layout-section-space": "clamp(3rem, 6vw, 6rem)"
   },
   "typographyRoles": {
     "serif": {
