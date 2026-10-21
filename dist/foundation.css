@@ -66,6 +66,14 @@
   --martlet-divider-thickness: 2px;
   --martlet-link-underline-offset: .16em;
   --martlet-motion-duration: .2s;
+  --martlet-layout-gap: 1.5rem;
+  --martlet-layout-gap-small: .75rem;
+  --martlet-layout-gap-large: 2.5rem;
+  --martlet-layout-sidebar-width: 16rem;
+  --martlet-layout-main-min: 30rem;
+  --martlet-layout-grid-min: 18rem;
+  --martlet-layout-split-min: 20rem;
+  --martlet-layout-section-space: clamp(3rem, 6vw, 6rem);
 }
 @media (prefers-reduced-motion: reduce) {
   :root, [data-martlet] { --martlet-transition-ui: 0s; --martlet-motion-duration: 0s; }
