@@ -1,7 +1,7 @@
 /* Optional layout primitives. No fonts, palette, global reset, or JavaScript. */
-.martlet-stack,.martlet-cluster,.martlet-grid,.martlet-sidebar,.martlet-split { gap:var(--martlet-layout-gap); min-inline-size:0; overflow-wrap:anywhere; }
-.martlet-space-small { --martlet-layout-gap:var(--martlet-layout-gap-small); }
-.martlet-space-large { --martlet-layout-gap:var(--martlet-layout-gap-large); }
+.martlet-stack,.martlet-cluster,.martlet-grid,.martlet-sidebar,.martlet-split { --martlet-layout-space:var(--martlet-layout-gap); gap:var(--martlet-layout-space); min-inline-size:0; overflow-wrap:anywhere; }
+.martlet-space-small { --martlet-layout-space:var(--martlet-layout-gap-small); }
+.martlet-space-large { --martlet-layout-space:var(--martlet-layout-gap-large); }
 .martlet-stack { display:flex; flex-direction:column; }
 .martlet-stack > * { min-inline-size:0; margin-block:0; }
 .martlet-cluster { display:flex; flex-wrap:wrap; align-items:center; justify-content:flex-start; }
@@ -9,7 +9,7 @@
 .martlet-cluster:is(ul,ol) { list-style:none; padding:0; margin:0; }
 .martlet-cluster--end { justify-content:flex-end; }
 .martlet-cluster--between { justify-content:space-between; }
-.martlet-grid { --martlet-grid-columns:3; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,max(var(--martlet-layout-grid-min),calc((100% - (var(--martlet-grid-columns) - 1) * var(--martlet-layout-gap)) / var(--martlet-grid-columns)))),1fr)); }
+.martlet-grid { --martlet-grid-columns:3; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,max(var(--martlet-layout-grid-min),calc((100% - (var(--martlet-grid-columns) - 1) * var(--martlet-layout-space)) / var(--martlet-grid-columns)))),1fr)); }
 .martlet-grid--1 { --martlet-grid-columns:1; }
 .martlet-grid--2 { --martlet-grid-columns:2; }
 .martlet-grid--4 { --martlet-grid-columns:4; }
