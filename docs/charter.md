@@ -1,8 +1,8 @@
 # Martlet design charter
 
-Draft 0.1 for review · October 21, 2026
+Version 1.0 · Adopted October 21, 2026
 
-This charter proposes the direction for Martlet's development as a complete design system. Its starting observation is agreed: Martlet feels warming, even within its blue, white, and gold vocabulary. The principles below translate that observation into criteria for design and review. Existing package contracts remain in force; this document introduces no token, API, or compatibility changes and does not imply that the proposed component inventory has shipped.
+This charter establishes the direction for Martlet's development as a complete design system. Its starting observation is agreed: Martlet feels warming, even within its blue, white, and gold vocabulary. The principles below translate that observation into criteria for design and review. Existing package contracts remain in force; this document introduces no token, API, or compatibility changes and does not imply that the proposed component inventory has shipped.
 
 ## Purpose and character
 
