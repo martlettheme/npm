@@ -38,9 +38,19 @@ Martlet and Krigsvold share a vocabulary of blue, white, gold, order, and restra
 
 Share interaction contracts, accessibility work, testing, and tooling where practical. Preserve independent decisions about typography, composition, surfaces, rhythm, and emphasis. Martlet's distinction must be visible in ordinary components and complete experiences, beyond a palette swap. Neither family has exclusive ownership of editorial or institutional applications.
 
+## Living baselines
+
+[jameshoward.us](https://jameshoward.us/) is the starting ground truth for Martlet and remains a live baseline throughout the system's development. Its real content, tasks, and ongoing use provide evidence for design decisions. The baseline describes what works today and can evolve as generalization exposes better solutions.
+
+An inherited decision that fails when generalized should be removed or revised. Establish a working replacement against both the originating site's real usage and the broader conditions that exposed the failure. Historical fidelity does not justify retaining a design that no longer works.
+
+Carry the validated improvement into the packages and specifications, then back into the originating website. Verify the revised site in use so it becomes the next live baseline. Record the failure, the replacement, and the reasons for the change, and follow the release and migration requirements of affected contracts.
+
+This feedback loop continues throughout development: observe real use, generalize, test, replace what fails, and improve the baseline. Controlled examples and automated checks support that work; they cannot establish real-world fitness on their own.
+
 ## Evidence and review
 
-The next milestone is four comparative experiences: an article with supporting material, a substantial form, a searchable collection, and an application dashboard. Use the same content and functionality in both families. Review whether Martlet's warmth remains apparent with brand marks removed, whether the hierarchy is clear, and whether the experience works at narrow widths and with enlarged text. Typography, grouping, and composition should provide evidence of its character.
+The next milestone is four comparative experiences: an article with supporting material, a substantial form, a searchable collection, and an application dashboard. Ground these comparisons in real content and tasks, and use the same content and functionality in both families. Continue evaluating changes against the live baseline while exploring contexts beyond it. Review whether Martlet's warmth remains apparent with brand marks removed, whether the hierarchy is clear, and whether the experience works at narrow widths and with enlarged text. Typography, grouping, and composition should provide evidence of its character.
 
 Use the live sites as consumers and test cases. Reusable decisions belong in the packages and specifications; site navigation, brand assets, routing, content, analytics, and consent policy remain host responsibilities. Examples embedded in a host site should inherit that site's shared page shell. Standalone starters should identify their purpose explicitly.
 
