@@ -2,6 +2,10 @@
 
 `@martlet/theme` is the framework-independent source of truth for Martlet. It contains Light/Dark semantic colors and the typography, spacing, shape, depth, and interaction definitions extracted from jameshoward.us.
 
+## Design direction
+
+For the proposed design direction and criteria for expanding the system, read the [Martlet design charter](docs/charter.md).
+
 ## Choose what to adopt
 
 | Import | Effect |
