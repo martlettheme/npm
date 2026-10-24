@@ -1,0 +1,21 @@
+/* Opt-in source translation. Existing semantic palettes and default primitives are unchanged. */
+.martlet-source-profile {
+  --martlet-field-gap:.5rem; --martlet-group-gap:1.5rem; --martlet-region-gap:2.5rem;
+  color:var(--martlet-source-ink,var(--martlet-text));
+}
+[data-martlet="light"] {
+  --martlet-source-ink:#222a33;
+  --martlet-source-heading:var(--martlet-color-navy-900);
+  --martlet-source-support:var(--martlet-color-cream);
+  --martlet-source-label:var(--martlet-color-gold-700); --martlet-index-label:var(--martlet-color-gold-600);
+}
+.martlet-source-profile .martlet-prose { font-size:var(--martlet-text-body); line-height:var(--martlet-leading-body); }
+.martlet-source-profile :where(h1,h2,h3) { color:var(--martlet-source-heading,var(--martlet-text-strong)); }
+.martlet-source-profile .martlet-page-header__copy::after { display:none; }
+.martlet-source-profile :where(a) { color:var(--martlet-link); }
+.martlet-source-profile :where(:focus-visible) { outline:3px solid white; outline-offset:3px; box-shadow:0 0 0 6px var(--martlet-color-navy-900); }
+.martlet-source-profile .martlet-prose :where(blockquote) { border-inline-start:4px solid var(--martlet-color-gold-500); padding-inline-start:1.2rem; }
+
+[data-martlet="dark"] { --martlet-source-ink:var(--martlet-text); --martlet-source-heading:var(--martlet-text-strong); --martlet-source-support:var(--martlet-panel); --martlet-source-label:var(--martlet-accent); --martlet-index-label:var(--martlet-accent); }
+
+.martlet-source-profile .martlet-page-header { background:transparent; color:var(--martlet-source-ink,var(--martlet-text)); }
