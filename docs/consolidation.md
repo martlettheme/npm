@@ -1,6 +1,6 @@
 # Martlet consolidation
 
-Core 2.2.0 and Astro 1.2.0 are **experimental release candidates**. Existing theme colors, typography defaults, component defaults, and Astro slots are retained. Do not install an unpublished version from npm. Use the paired review branches or packed archives to evaluate this change.
+Core 2.2.1 and Astro 1.2.1 provide the experimental consolidation. Use the `next` dist-tags or explicit versions when adopting it: `npm install @martlet/theme@next @martlet/astro@next`. Check registry availability rather than inferring it from a source checkout. Existing theme defaults and Astro slots retain their contracts.
 
 The core owns [grammar](grammar.md), [source decisions](source-decisions.md), [foundation requirements](foundations.md), `language.json`, and framework-independent pattern CSS. Astro owns rendering and slots. React owns its events, controlled state and focus APIs. Documentation and agent references must identify the exact guidance revision. Publication does not establish grammar stability.
 
@@ -20,10 +20,14 @@ SiteFooter defaults to the existing plain rendering. `variant="grouped"` accepts
 
 ## Navigation and interaction boundaries
 
-Both languages permit top, side and focused frames. Astro SiteHeader remains a wrapping link header; no dropdown, menu controller or React state API is claimed. Martlet uses the audited source header and document-index hierarchy; source index labels use darker existing gold on cream for contrast.
+Both languages permit top, side and focused frames. Astro SiteHeader remains a wrapping link header; no dropdown, menu controller or React state API is claimed. The React reference host uses the audited source header and document-index hierarchy; source index labels use darker existing gold on cream for contrast.
 
 Preserve native semantics, focus visibility, retained input, actionable validation, save retry, draft protection and undo where appropriate. These behavioral obligations cross frameworks; their React implementations do not become Astro props. Full dark mode and new app controls remain extensions. Figure, footnote, maths, archive/card variants and richer data workflows remain gaps.
 
 ## Experimental distribution
 
 The GitHub pre-release publishes the verified package under npm’s `next` dist-tag. The existing `latest` tag stays unchanged. An experimental publication does not establish grammar stability or manual assistive-technology conformance. Promote a release only through a separate reviewed release decision.
+
+Publication status is intentionally separate from implementation maturity. A canonical guidance snapshot records its own revision; it does not discover live registry state.
+
+Astro SiteHeader retains its existing generic wrapping-link rendering. It is not the audited source-site masthead or a menu controller. Host styling and responsive navigation remain explicit integration work. Astro contents remain in print by default; do not transfer the React print rule to Astro.
