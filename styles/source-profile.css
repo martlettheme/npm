@@ -12,7 +12,6 @@
 .martlet-source-profile .martlet-prose { font-size:var(--martlet-text-body); line-height:var(--martlet-leading-body); }
 .martlet-source-profile :where(h1,h2,h3) { color:var(--martlet-source-heading,var(--martlet-text-strong)); }
 .martlet-source-profile .martlet-page-header__copy::after { display:none; }
-.martlet-source-profile :where(a) { color:var(--martlet-link); }
 .martlet-source-profile :where(:focus-visible) { outline:3px solid white; outline-offset:3px; box-shadow:0 0 0 6px var(--martlet-color-navy-900); }
 .martlet-source-profile .martlet-prose :where(blockquote) { border-inline-start:4px solid var(--martlet-color-gold-500); padding-inline-start:1.2rem; }
 

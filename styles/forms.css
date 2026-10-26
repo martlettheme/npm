@@ -1,0 +1,36 @@
+/* Experimental native-HTML application extensions; behavior and ARIA belong to the host. */
+.martlet-form { display:grid; gap:var(--martlet-region-gap,2.5rem); min-inline-size:0; font:1rem/1.5 var(--martlet-font-sans); }
+.martlet-field { display:grid; align-content:start; gap:var(--martlet-field-gap,.5rem); min-inline-size:0; }
+.martlet-field > label, .martlet-fieldset > legend { color:var(--martlet-text-strong); font:700 .86rem/1.5 var(--martlet-font-sans); letter-spacing:.02em; }
+.martlet-field :where(input,select,textarea) { inline-size:100%; font:1rem/1.5 var(--martlet-font-sans); }
+.martlet-field :where(textarea) { resize:vertical; min-block-size:7rem; }
+.martlet-field :where(p), .martlet-hint, .martlet-error { margin:0; }
+.martlet-hint { color:var(--martlet-text-subtle); font:.875rem/1.5 var(--martlet-font-sans); }
+.martlet-error { color:var(--martlet-danger); font:.875rem/1.5 var(--martlet-font-sans); }
+.martlet :where(input,select,textarea)[aria-invalid="true"], .martlet-fieldset[aria-invalid="true"] { border-color:var(--martlet-danger); }
+.martlet :where(input,select,textarea):disabled { color:var(--martlet-disabled-text); background:var(--martlet-disabled-bg); cursor:default; }
+.martlet-fieldset { display:grid; gap:var(--martlet-group-gap,1.5rem); min-inline-size:0; margin:0; padding:0; border:0; }
+.martlet-fieldset > legend { padding:0; margin-block-end:var(--martlet-group-gap,1.5rem); }
+.martlet-fieldset[aria-invalid="true"] { border-inline-start:3px solid var(--martlet-danger); padding-inline-start:1rem; }
+.martlet-checkbox, .martlet-radio { display:flex; gap:.5rem; align-items:flex-start; min-block-size:var(--martlet-control-height); padding-block:.5rem; font:1rem/1.5 var(--martlet-font-sans); cursor:pointer; }
+.martlet-checkbox input, .martlet-radio input { flex:none; inline-size:1.2rem; block-size:1.2rem; min-block-size:0; margin:.15rem 0 0; padding:0; accent-color:var(--martlet-accent); }
+.martlet-checkbox:has(input:disabled), .martlet-radio:has(input:disabled) { color:var(--martlet-disabled-text); cursor:default; }
+.martlet-button--secondary { background:var(--martlet-button-secondary-bg); color:var(--martlet-button-secondary-text); border-color:var(--martlet-border-strong); }
+.martlet-button--secondary:hover { background:var(--martlet-button-secondary-hover); color:var(--martlet-button-secondary-text); }
+.martlet-button--quiet { background:transparent; color:var(--martlet-link); border-color:transparent; }
+.martlet-button--quiet:hover { background:var(--martlet-hover-bg); color:var(--martlet-link-hover); }
+.martlet-button:disabled { background:var(--martlet-disabled-bg); color:var(--martlet-disabled-text); border-color:var(--martlet-disabled-bg); }
+.martlet-button[aria-disabled="true"] { cursor:default; }
+.martlet-notice, .martlet-error-summary { min-inline-size:0; padding:1rem 1.5rem; border-inline-start:4px solid var(--martlet-info); color:var(--martlet-info-text); background:var(--martlet-info-bg); font:1rem/1.5 var(--martlet-font-sans); overflow-wrap:anywhere; }
+.martlet-notice--success { border-color:var(--martlet-success); color:var(--martlet-success-text); background:var(--martlet-success-bg); }
+.martlet-notice--error, .martlet-error-summary { border-color:var(--martlet-danger); color:var(--martlet-danger-text); background:var(--martlet-danger-bg); }
+.martlet-error-summary { display:grid; gap:1rem; }
+.martlet-error-summary :where(h2,p,ul), .martlet-notice :where(h2,p) { margin-block:0; }
+.martlet-error-summary h2, .martlet-notice h2 { color:inherit; font:700 1.15rem/1.5 var(--martlet-font-sans); }
+.martlet-error-summary ul { padding-inline-start:1.25rem; }
+.martlet-error-summary a, .martlet-notice a { color:inherit; text-decoration:underline; }
+.martlet-dialog { inline-size:min(32rem,calc(100% - 2rem)); max-inline-size:calc(100% - 2rem); max-block-size:calc(100dvh - 2rem); overflow:auto; padding:1.5rem; border:1px solid var(--martlet-border-strong); background:var(--martlet-surface-overlay); color:var(--martlet-text); font:1rem/1.65 var(--martlet-font-sans); }
+.martlet-dialog::backdrop { background:var(--martlet-overlay-scrim); }
+.martlet-dialog h2 { margin-block:0 1rem; color:inherit; }
+.martlet-actions { display:flex; flex-wrap:wrap; align-items:center; gap:1rem; }
+.martlet-button[hidden], .martlet-form[hidden], .martlet-field[hidden], .martlet-hint[hidden], .martlet-error[hidden], .martlet-notice[hidden], .martlet-error-summary[hidden], .martlet-fieldset[hidden], .martlet-actions[hidden] { display:none; }
