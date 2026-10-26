@@ -33,4 +33,4 @@
 .martlet-dialog::backdrop { background:var(--martlet-overlay-scrim); }
 .martlet-dialog h2 { margin-block:0 1rem; color:inherit; }
 .martlet-actions { display:flex; flex-wrap:wrap; align-items:center; gap:1rem; }
-.martlet-form[hidden], .martlet-field[hidden], .martlet-hint[hidden], .martlet-error[hidden], .martlet-notice[hidden], .martlet-error-summary[hidden], .martlet-fieldset[hidden], .martlet-actions[hidden] { display:none; }
+.martlet-button[hidden], .martlet-form[hidden], .martlet-field[hidden], .martlet-hint[hidden], .martlet-error[hidden], .martlet-notice[hidden], .martlet-error-summary[hidden], .martlet-fieldset[hidden], .martlet-actions[hidden] { display:none; }
